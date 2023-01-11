@@ -1,6 +1,6 @@
 package stats
 
-import "github.com/adheeeem/bank/pkg/bank/types"
+import "github.com/adheeeem/bank/pkg/types"
 
 func Avg(payments []types.Payment) types.Money {
 	length := len(payments)
