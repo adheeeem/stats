@@ -3,11 +3,12 @@ package stats
 import "github.com/adheeeem/bank/v2/pkg/types"
 
 func Avg(payments []types.Payment) types.Money {
-	length := len(payments)
+	length := 0
 	sum := types.Money(0)
 	for _, payment := range payments {
 		if payment.Status != types.StatusFail {
 			sum += payment.Amount
+			length++
 		}
 	}
 	sum /= types.Money(length)

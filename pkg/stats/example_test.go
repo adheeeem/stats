@@ -11,21 +11,24 @@ func ExampleAvg() {
 			ID:       1,
 			Amount:   50_00,
 			Category: "korti milli",
+			Status:   "FAIL",
 		},
 		{
 			ID:       2,
 			Amount:   10_000,
 			Category: "visa",
+			Status:   "OK",
 		},
 		{
 			ID:       3,
 			Amount:   35_00,
 			Category: "visa",
+			Status:   "INPROGRESS",
 		},
 	}
 	result := Avg(payments)
 	fmt.Println(result)
-	// Output: 6166
+	// Output: 6750
 }
 
 func ExampleTotalInCategory() {
@@ -35,21 +38,25 @@ func ExampleTotalInCategory() {
 			ID:       1,
 			Amount:   50_00,
 			Category: "korti milli",
+			Status:   "OK",
 		},
 		{
 			ID:       2,
 			Amount:   10_000,
 			Category: "visa",
+			Status:   "FAIL",
 		},
 		{
 			ID:       3,
 			Amount:   35_00,
 			Category: "visa",
+			Status:   "OK",
 		},
 		{
 			ID:       4,
 			Amount:   15_000,
 			Category: "korti milli",
+			Status:   "INPROGRESS",
 		},
 	}
 	result := TotalInCategory(payments, category)
